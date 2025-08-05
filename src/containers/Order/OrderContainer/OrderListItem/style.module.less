@@ -1,0 +1,78 @@
+.order_item_card {
+  // background-color: var(--card-background-lightyellow);
+  background-color: #fff;
+  .card_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .status {
+      font-size: 14px;
+      color: var(--adm-color-weak);
+    }
+    padding-bottom: 8px;
+  }
+  .order_item {
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+
+    .order_content {
+      padding: 5px 12px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      .line_1 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        .tech_name {
+          font-size: 16px;
+          font-weight: bold;
+          padding-bottom: 8px;
+        }
+        .product_name {
+          font-size: 14px;
+        }
+      }
+
+      .money {
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--money-color);
+      }
+    }
+  }
+
+  .order_time {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    font-weight: bold;
+  }
+  .product_info {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    padding-bottom: 2px;
+    .product_name {
+      font-size: 14px;
+      // color: var(--adm-color-weak);
+      // font-weight: bold;
+    }
+    .product_count {
+      font-size: 12px;
+      color: var(--adm-color-weak);
+    }
+  }
+  .money_wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .img_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

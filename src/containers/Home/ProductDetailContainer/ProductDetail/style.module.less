@@ -1,0 +1,130 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  // :global(.adm-image-img) {
+  //   height: auto;
+  // }
+  .content_wrapper {
+    padding: 0 15px 15px 15px;
+    margin-top: -15px;
+    z-index: 1;
+  }
+  .product_card {
+    // background-color: #ffffe3;
+    background-color: #fff;
+    :global(.adm-card-body) {
+      padding: 0 !important;
+    }
+    padding: 0 !important;
+    &_content {
+      .part_1 {
+        padding: 20px 12px;
+        // background-color: #ffffe3;
+        .product_summary {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          .product_name {
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .product_price {
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--money-color);
+          }
+          .duration_line {
+            display: flex;
+            font-size: 14px;
+            justify-content: space-between;
+            color: var(--adm-color-weak);
+            .duration {
+              display: flex;
+              gap: 5px;
+              align-items: center;
+              line-height: 1;
+            }
+          }
+        }
+      }
+      .product_detail_desc {
+        padding-top: 20px;
+        .title {
+          font-size: 18px;
+          font-weight: bold;
+          display: flex;
+          justify-content: center;
+          // font-style: italic;
+        }
+        &_content {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          padding: 8px;
+          &_part {
+            font-size: 14px;
+            line-height: 2;
+          }
+        }
+      }
+      .forbidden_desc {
+        // background-color: #ffffe3;
+        display: flex;
+        flex-direction: column;
+        line-height: 2;
+        padding: 20px 12px;
+
+        .title {
+          font-size: 18px;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+
+        &_line {
+          display: flex;
+          align-items: flex-start;
+
+          .text {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+  .dot_container {
+    display: flex;
+    align-items: center;
+    height: 2em; /* 与文本第一行高度匹配 */
+    .dot {
+      width: 5px;
+      height: 5px;
+      // background-color: #cd8b41;
+      background-color: black;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+  }
+  .tabs {
+    :global(.adm-tabs-header) {
+      border-bottom: none !important;
+    }
+    .title_in_tab {
+      font-weight: bold;
+    }
+    p {
+      line-height: 2;
+      display: flex;
+      gap: 5px;
+      font-size: 14px;
+      .number_in_tab {
+        font-size: 14px;
+        line-height: 2;
+        position: relative;
+        top: -1px;
+        font-weight: bold;
+      }
+    }
+  }
+}

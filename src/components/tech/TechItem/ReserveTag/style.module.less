@@ -1,0 +1,28 @@
+.worktime {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  .worktime_title {
+    background: #ffea95;
+    padding: 2px 5px 2px 9px;
+    border-radius: 8px 0 0 8px;
+    color: #5c5b5b;
+  }
+  .worktime_content {
+    &_success {
+      border: 1px solid var(--adm-color-primary);
+      color: var(--adm-color-primary);
+      background: white;
+      padding: 2px 7px 2px 5px;
+      border-radius: 0 8px 8px 0;
+      font-weight: bold;
+    }
+    &_fail {
+      color: #7e7c7c;
+      background: var(--adm-color-dark-border);
+      padding: 2px 7px 2px 5px;
+      border-radius: 0 8px 8px 0;
+      font-weight: bold;
+    }
+  }
+}

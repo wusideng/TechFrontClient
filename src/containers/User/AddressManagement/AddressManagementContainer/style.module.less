@@ -1,0 +1,99 @@
+@import (reference) "@/assets/css/main.less";
+@import "@/assets/css/mixin.less";
+
+.address_management_container {
+  background: #f5f5f5 !important;
+  .address_list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 5px;
+    .address_item {
+      display: flex;
+      border-radius: 12px;
+      background-color: white;
+      flex-direction: column;
+      .address_item_content_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .user_info_wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+          .user_info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .name {
+              font-size: 16px;
+            }
+            .phone {
+              display: flex;
+              align-items: center;
+              gap: 3px;
+            }
+          }
+
+          .address {
+            font-weight: bold;
+            font-size: 16px;
+            padding-right: 25px;
+          }
+          .street {
+            font-size: 14px;
+            color: var(--adm-color-weak);
+          }
+        }
+        .bottom_line_wrapper {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .default_tag {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            color: @theme-color-secondary;
+            font-size: 14px;
+            gap: 4px;
+            .icon {
+              color: @theme-color-secondary;
+              font-size: 18px;
+            }
+          }
+          .default_tag_disabled {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            color: @theme-color-dark;
+            font-size: 14px;
+            gap: 4px;
+            .circle {
+              border-radius: 50%;
+              border: 1px solid @theme-color-dark;
+              height: 14px;
+              width: 14px;
+            }
+            // .icon {
+            //   color: @theme-color-dark;
+            //   font-size: 16px;
+            //   margin-right: 4px;
+            // }
+          }
+          .actions {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            .action {
+              background: #dcdcdc;
+              padding: 5px;
+              cursor: pointer;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

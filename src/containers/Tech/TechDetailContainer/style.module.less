@@ -1,0 +1,64 @@
+.wrapper {
+  :global(.content-area) {
+    padding: 0 !important;
+  }
+  .swipper {
+    align-self: stretch;
+    :global(.adm-image-img) {
+      height: auto;
+    }
+  }
+  .content_wrapper {
+    padding: 0 20px 20px 20px;
+    margin-top: -8px;
+    z-index: 1;
+    .tech_card {
+      background-color: #fff;
+      padding: 0 !important;
+      &_content {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        .tech_intro {
+          color: var(--adm-color-weak);
+          padding: 0 24px;
+        }
+        .icon_and_text {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          //只有设置line-height才能使svg图标和纯数字水平居中对齐
+          line-height: 1;
+        }
+        .certify {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          font-weight: bold;
+          background-color: darkseagreen;
+          padding: 12px;
+          font-size: 14px;
+          color: #4e4e4e;
+        }
+        .last_line {
+          display: flex;
+          justify-content: space-between;
+          padding: 12px;
+          font-size: 14px;
+          color: #4e4e4e;
+        }
+      }
+    }
+  }
+}
+.empty_card {
+  background-color: #fff;
+}
+.cards_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  :global(.card-style) {
+    background: #fff !important;
+  }
+}

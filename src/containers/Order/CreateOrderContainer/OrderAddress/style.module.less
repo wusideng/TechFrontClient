@@ -1,0 +1,71 @@
+.button_wrapper {
+  background: #fff;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  :global(button) {
+    width: 75%;
+    border-radius: 25px;
+  }
+  .button_text {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+  }
+}
+.address_card {
+  background-color: #fff;
+  .address_card_conent_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .user_info_wrapper {
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      .user_info {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 8px;
+        .name_phone_wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          .name_phone {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            .name {
+              font-size: 16px;
+            }
+          }
+          .phone_hint {
+            font-size: 12px;
+            color: var(--adm-color-weak);
+          }
+        }
+      }
+
+      .address {
+        font-weight: bold;
+        font-size: 14px;
+        padding-right: 25px;
+      }
+      .street {
+        color: var(--adm-color-weak);
+      }
+    }
+    .edit_button {
+      width: 50px;
+      padding-right: 12 px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: var(--adm-color-primary);
+    }
+  }
+}

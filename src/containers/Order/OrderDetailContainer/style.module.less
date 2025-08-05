@@ -1,0 +1,99 @@
+.status {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #a77957;
+  font-weight: bold;
+  background-color: lightgoldenrodyellow;
+}
+.order_card {
+  background: #fff;
+}
+.order_products_card {
+  padding: 0;
+  .order_products_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.product_detail {
+  padding: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 0.5px solid #c0c0c0;
+  // margin-bottom: 5px;
+
+  .product_summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 12px 0px 12px 12px;
+    flex: 1;
+    .product_summary_desc {
+      display: flex;
+      justify-content: space-between;
+      .product_name {
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .product_count {
+        font-size: 12px;
+        color: var(--adm-color-weak);
+      }
+      .money {
+        color: var(--money-color);
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.product_fee_summary {
+  padding: 0 12px;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+.product_summary_all {
+  align-self: flex-end;
+  .text {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .money {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--money-color);
+  }
+}
+.second_card {
+  background: #fff;
+  .second_card_content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+.order_detail_item {
+  display: flex;
+  // line-height: 1.5rem;
+  justify-content: space-between;
+  .item_name {
+    // min-width: 30%;
+    // flex-shrink: 0;
+    font-size: 14px;
+    // font-weight: bold;
+    color: var(--adm-color-weak);
+  }
+  .item_value {
+    font-size: 14px;
+    color: black;
+    flex: 1;
+    text-align: right;
+  }
+}

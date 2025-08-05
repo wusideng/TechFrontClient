@@ -1,0 +1,51 @@
+import { IconProps } from "@/types/Icon";
+
+const LocationIcon: React.FC<IconProps> = ({
+  size = 14,
+  color = "#4147d5",
+  fill = "#d7e0ff",
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 14 14"
+      id="Location-Compass-1--Streamline-Flex"
+      height={size}
+      width={size}
+    >
+      <desc>Location Compass 1 Streamline Icon: https://streamlinehq.com</desc>
+      <g id="location-compass-1--arrow-compass-location-gps-map-maps-point">
+        <path
+          id="Vector"
+          fill={fill}
+          d="M7 13.25c4 0 6.25 -2.25 6.25 -6.25S11 0.75 7 0.75 0.75 3 0.75 7 3 13.25 7 13.25Z"
+          strokeWidth="1"
+        ></path>
+        <path
+          id="Vector_2"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M7 13.25c4 0 6.25 -2.25 6.25 -6.25S11 0.75 7 0.75 0.75 3 0.75 7 3 13.25 7 13.25Z"
+          strokeWidth="1"
+        ></path>
+        <path
+          id="Vector_3"
+          fill="#ffffff"
+          d="M5.96219 8.03821c0.38767 0.38767 0.69834 1.19193 0.90723 1.87455 0.12983 0.42424 0.7123 0.52884 0.93778 0.14664 0.89401 -1.51516 1.54504 -3.12797 1.61119 -4.64574 0.02056 -0.47167 -0.35999 -0.85225 -0.83166 -0.83171 -1.51772 0.06609 -3.13056 0.71717 -4.64571 1.61119 -0.38212 0.22547 -0.27763 0.80792 0.14664 0.93777 0.68259 0.20892 1.48684 0.51962 1.87453 0.9073Z"
+          strokeWidth="1"
+        ></path>
+        <path
+          id="Vector_4"
+          stroke={color}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M5.96219 8.03821c0.38767 0.38767 0.69834 1.19193 0.90723 1.87455 0.12983 0.42424 0.7123 0.52884 0.93778 0.14664 0.89401 -1.51516 1.54504 -3.12797 1.61119 -4.64574 0.02056 -0.47167 -0.35999 -0.85225 -0.83166 -0.83171 -1.51772 0.06609 -3.13056 0.71717 -4.64571 1.61119 -0.38212 0.22547 -0.27763 0.80792 0.14664 0.93777 0.68259 0.20892 1.48684 0.51962 1.87453 0.9073Z"
+          strokeWidth="1"
+        ></path>
+      </g>
+    </svg>
+  );
+};
+export default LocationIcon;

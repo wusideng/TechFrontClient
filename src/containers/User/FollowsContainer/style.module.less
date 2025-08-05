@@ -1,0 +1,41 @@
+.wrapper {
+  .tech_item_card {
+    // background-color: var(--card-background-lightyellow);
+    background-color: #fff;
+    position: relative;
+    .tech_item_card_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      //   gap: 5px;
+      .line_1 {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        align-self: stretch;
+        padding: 8px 0 0 0;
+        justify-content: space-between;
+        .name {
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+      .line_2 {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-top: 10px;
+        .distance {
+          color: var(--adm-color-weak);
+        }
+      }
+    }
+  }
+  .follow_icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+}

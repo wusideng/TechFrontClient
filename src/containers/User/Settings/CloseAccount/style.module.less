@@ -1,0 +1,44 @@
+.wrapper {
+  background: #fff !important;
+  .content_wrapper {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-size: 14px;
+    line-height: 2;
+    .title {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  .button_wrapper {
+    padding: 8px 20px;
+  }
+}
+.modal_confirm {
+  :global(.adm-center-popup-wrap) {
+    padding-bottom: 25px !important;
+  }
+
+  :global(.adm-modal-footer) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    :global(.adm-space-item) {
+      margin: 0 !important;
+      button {
+        border-radius: 12px !important;
+        padding: 8px 20px;
+      }
+    }
+    :global(.adm-space-item:last-child) {
+      button {
+        background-color: #f5f5f5;
+        color: black;
+      }
+    }
+  }
+}

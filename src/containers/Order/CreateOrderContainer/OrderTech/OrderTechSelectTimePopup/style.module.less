@@ -1,0 +1,66 @@
+@import "@/assets/css/mixin.less";
+.select_worktime_popup {
+  :global(.adm-tabs-header) {
+    border: none !important;
+  }
+  :global(.adm-popup-body) {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
+  .booktime {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px;
+  }
+  .worktime_block {
+    padding: 5px 12px;
+    .time_slot {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 15px;
+      background-color: white;
+      border: 0.5px solid rgb(153, 153, 153);
+    }
+    .disabled {
+      color: var(--adm-color-weak);
+      background-color: #f5f5f5;
+      border: none;
+    }
+    .current {
+      border: 0.5px solid var(--adm-color-primary);
+      color: var(--adm-color-primary);
+      background-color: #fff;
+    }
+  }
+  :global(.adm-tabs-tab-line) {
+    display: none;
+  }
+  :global(.adm-tabs) {
+    .flex-column();
+    :global(.adm-tabs-header) {
+      position: sticky;
+      top: 0px;
+      border-bottom: none;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    }
+    :global(.adm-tabs-content) {
+      flex: 1;
+      overflow: auto;
+      padding: 10px 15px 15px 15px !important;
+    }
+  }
+  :global(.adm-tabs-tab-wrapper) {
+    flex: 1 !important;
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center;
+    :global(.adm-tabs-tab) {
+      margin: 0 !important;
+    }
+  }
+}

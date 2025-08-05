@@ -1,0 +1,24 @@
+/* 在你的全局样式文件中添加这些样式 */
+html,
+body {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; /* 为 iOS 设备提供平滑滚动 */
+}
+
+/* 隐藏 WebKit 浏览器的滚动条 (iOS, Android) */
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  background: transparent;
+}
+
+/* 隐藏 IE 和 Edge 的滚动条 */
+* {
+  -ms-overflow-style: none;
+}
+
+/* 隐藏 Firefox 的滚动条 */
+html,
+body {
+  scrollbar-width: none;
+}

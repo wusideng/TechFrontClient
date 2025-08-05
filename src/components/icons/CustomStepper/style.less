@@ -1,0 +1,55 @@
+/* style.less */
+.custom-stepper {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 4px;
+
+  .stepper-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: opacity 0.2s;
+    // line-height: 1;
+
+    // 直接在CSS中设置背景色和文字颜色
+    background: var(--adm-color-primary);
+    color: white;
+
+    &:disabled {
+      color: #cdcdcd;
+      background: #f5f5f5;
+      border: 1px solid #cdcdcd;
+      cursor: not-allowed;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .stepper-input {
+    width: 40px;
+    height: 22px;
+    padding: 0;
+    margin: 0 3px;
+    font-size: 14px;
+    text-align: center;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    background-color: transparent;
+    color: #333;
+  }
+}

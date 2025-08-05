@@ -1,0 +1,86 @@
+本项目为尚达元在线按摩平台的前端服务
+尚达元在线按摩平台是一个微信公众服务号，有两个入口：1.用户端 2.技师端 3.管理端
+用户端可以预约技师，查看预约记录，查看技师信息，查看订单信息，查看服务记录等
+技师端可以查看预约记录，查看订单信息，查看服务记录等
+管理端供管理人员查看一些信息
+后端服务为用户端和技师端提供数据支持，包括预约记录，订单信息，技师信息等
+本项目目前所有服务都部署在阿里云服务器上，并使用nginx代理服务, 服务器域名为visualstree.cn
+homeServiceBackend为后端服务的主目录，包含所有后端服务的代码
+homeFrontClient为用户端主目录，包含用户端前端所有代码
+homeFrontTech为技师端主目录，包含技师端所有代码
+homeInitSql为数据库的表结构记录
+homeFrontService为管理端主目录
+前端开发标准：
+homefrontclient:
+    1.前端状态管理使用的是reduxtoolkit, slice文件根目录为@/store/slices, @为src的alias，请正确识别。
+    2.前端slice注册到@/store/index.tsx文件中
+    3.在创建新的slice文件时，请参考addressManagementSlice.ts, 所有的异步action都要通过createAsyncThunk方法来实现，
+    所有的异步action的状态都要通过extraReducer来监控
+    4. 当添加一个新的组合时，需要创建一个新的文件夹，文件夹名称就是组件名，然后添加index.tsx和style.module.less,
+    然后使用模块化的方式引用classname （<div>className={styles.some_class}</div>)
+    并在组件中import styles from "./style.module.less", 
+    5. css/less尽可能使用flex布局，尽量避免使用position属性
+    6. icon checkbox 字体如果要使用绿色，请用var(--adm-color-primary),如果要使用暗色，请引用main.less中的@theme-colo-dark
+    7. 引用一个文件时如果不是同级目录，使用alias @代表src目录，同级目录可以通过import xxx from ./xxx的形式引用
+    8. reducer 内容介绍，目前reducer有userSlice,orderSlice,addressSlice,followSlice,routerSlice,productSlice,
+    techuserslice,addressmanagementslice 这几个文件
+    userlice里内容为当前用户的信息，addressSlice 为当前用户的地址信息，地址信息是通过高德地位来获取的，每次用户登录都会获取地址，
+    followSlices为用户关注的技师信息，orderSlice为订单信息，routerSlice为路由信息，productSlice为产品信息，techuserslice为技师信息，addressmanagementslice
+    为用户地址管理信息。
+    下面我逐一介绍下这几个reducer里的详细内容以及使用方式：
+    followSlice:
+        followingTechOpenids 为用户关注的技师的openid列表，目前这个变量是通过在技师查询页面得到技师列表时进行更新的，每一个技师都有is_followed字段，
+        表示技师是否被当前用户关注了，如果被关注了就是true，否则是false，获取到技师列表时，把所有is_followed字段是true的技师的openid
+        放到followingTechOpenids里。
+        followingTechs 为用户关注的技师列表，每一项为技师的详细信息，这个是在用户查看关注技师页面的时候获取。
+        followsMap 是一个字典，key为技师openid value为技师被关注人数，之所以把这个信息放到map里是为了方便操作。我们目前有用户点击关注按钮，
+        关注技师，然后页面显示用户关注了技师，并且技师关注人数+1， 考虑到这个信息如果发送到后端再获取状态更新，太费时间，影响用户体验，我们目前
+        这个状态完全在前端维护，也就是用户关注/取消关注技师时，followingTechOpenids发生改变，添加/移除技师openid，followsMap 发生改变，对应的技师
+        openid的value +1/-1, 当然我们也会默默的向后端发送关注/取消关注的api，只不过我们无需等待后端返回结果。
+    addressSlice:
+        这个是用户的地址信息的reducer, 这里不要把它与addressmanagementslice搞混了，addressmanagementslice是用户管理地址的reducer，它的信息是用户
+        在管理地址页面或者其他页面对地址的操作。我们目前addressslice里的address只是用于显示用户当前位置，以及在技师页面计算与技师的距离。其他任何
+        页面对地址的使用都是用的addressmanagementslice的地址信息
+    orderslice:
+        用户的订单信息，包含正在创建的订单表单信息，历史订单信息，当前正在查看的订单详情等。其中用户正在创建订单时，需要使用用户的地址才能完成订单的
+        创建，这里的地址是addressmanagement的地址，也就是说用户需要现在地址管理里创建地址才能创建订单，当然创建订单页面也有创建地址的跳转。
+    routerSlice:
+        routerSlice只有一个作用，就是记录router是从哪个地址跳转到哪个地址，我们可以把它用作路由守卫
+    techuserSlice:
+        技师的详细信息，包含技师列表，正在被查看的技师详情等。技师详情包含技师的地址信息，经纬度，最近工作时间等。
+homeservicebackend
+    1.当添加一个新的功能时，如果需要创建新的数据库表，需要先添加数据库的model定义，model怎么写参考t_user_address.py的格式, 
+        model 文件放在app/model路径下
+        请务必参考t_user_address.py的格式，确保格式一致,如t_user_address.py的格式为：
+        from datetime import datetime
+        from typing import Optional
+        from sqlmodel import Field, SQLModel
+        from sqlalchemy import desc
+
+
+        class UserAddress(SQLModel, table=True):
+            """用户地址模型"""
+
+        __tablename__ = "t_client_user_addresses"
+        ...
+        如果有create_time之类的字段default 为datetime.now不要使用utc时间
+
+        请确保这个格式
+
+    2.如果这个功能是一个大的模块，需要创建一个新的router文件，放到app/routers文件夹，并且注册路由，路由注册在app/main.py
+    3.router文件内容的格式请务必参考user_address.py中的内容，确保格式一致,如果需要获取session，使用from app.core.database import get_session
+    4. sql 语句设计：
+        sql语句使用ORM方式查询，要求：
+        （1）sql语句代码简洁，执行次数少
+         (2) sql语句执行效率高，如果有必要可以在一个方法里执行多个query
+homeInitSql :为数据库的表结构记录,如果需要创建新的数据库表或者需要添加/修改当前数据库的某些字段，需要在这个项目里先添加数据库的表结构，
+    表结构请务必参考create_t_client_user.sql，确保格式一致,比如create_t_client_user.sql的实现类似：
+    IF NOT EXISTS (SELECT * FROM sys.tables WHERE name='t_client_user_addresses')
+
+    CREATE TABLE [dbo].[t_client_user_addresses](	
+    [id] INT IDENTITY(1,1) PRIMARY KEY,
+    ...
+    EXEC sys.sp_addextendedproperty 'MS_Description','地址ID（主键）','SCHEMA','dbo','TABLE','t_client_user_addresses','COLUMN','id';
+    ... 
+    请保持这个格式
+   

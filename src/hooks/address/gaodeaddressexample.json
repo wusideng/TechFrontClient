@@ -1,0 +1,33 @@
+{
+  "status": 0,
+  "code": 0,
+  "info": "SUCCESS",
+  "position": [120.383867, 36.106885],
+  "location_type": "html5",
+  "message": "Get ipLocation failed.Get geolocation success.Convert Success.Get address success.",
+  "accuracy": 111,
+  "isConverted": false,
+  "altitude": null,
+  "altitudeAccuracy": null,
+  "heading": null,
+  "speed": null,
+  "addressComponent": {
+    "citycode": "0532",
+    "adcode": "370203",
+    "businessAreas": [],
+    "neighborhoodType": "",
+    "neighborhood": "",
+    "building": "",
+    "buildingType": "",
+    "street": "台柳路",
+    "streetNumber": "127甲",
+    "province": "山东省",
+    "city": "青岛市",
+    "district": "市北区",
+    "township": "海伦路街道"
+  },
+  "formattedAddress": "山东省青岛市市北区海伦路街道台柳路127甲高光时刻篮球公园",
+  "roads": [],
+  "crosses": [],
+  "pois": []
+}

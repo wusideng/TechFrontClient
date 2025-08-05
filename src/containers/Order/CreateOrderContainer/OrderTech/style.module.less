@@ -1,0 +1,38 @@
+.tech {
+  background: #fff;
+  .tech_card_content_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .edit_time {
+        color: var(--adm-color-primary);
+      }
+      .tech_info {
+        display: flex;
+        align-items: center;
+        height: 3rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.button_wrapper {
+  background: #fff;
+  padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  :global(button) {
+    width: 75%;
+    border-radius: 25px;
+  }
+  .button_text {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+  }
+}

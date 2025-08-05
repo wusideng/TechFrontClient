@@ -1,0 +1,142 @@
+.product-item-container {
+  display: flex;
+  font-size: 0.7rem;
+  align-items: stretch;
+  gap: 15px;
+  .product-item-desc {
+    flex-grow: 1;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+    justify-content: center;
+    .duration {
+      display: flex;
+      align-items: center;
+    }
+    // justify-content: flex-start;
+    .price {
+      display: flex;
+      margin-top: 7px;
+      justify-content: space-between;
+      align-items: flex-end;
+      .content-btn {
+        margin-right: 2px;
+      }
+    }
+    .content-price {
+      font-size: 14px;
+      font-weight: bolder;
+      color: @money-color;
+      // display: flex;
+      .money {
+        font-size: 18px;
+      }
+    }
+    .content-oldprice {
+      text-decoration: line-through;
+      width: 50px;
+      padding-left: 15px;
+      color: #dbdbdb;
+    }
+  }
+
+  .title {
+    color: black;
+    margin-bottom: 0px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+.HorizProductList {
+  display: flex;
+  overflow: scroll;
+  padding: 3px;
+  gap: 10px;
+  // flex-wrap: wrap;
+  .productItem {
+    display: flex;
+    flex-direction: column; // 纵向排列
+    align-items: center;
+    margin-right: 10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    // background-color: #fff;
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white),
+      linear-gradient(to right, #ff5733, #33ff57, #3357ff);
+    background-clip: padding-box, border-box;
+    background-image: linear-gradient(to right, #ff5733, #33ff57, #3357ff) 1;
+    color: #333;
+    .imgItem {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%; // 圆形图片
+      margin-right: 5px; // 图片与复选框之间的间距
+    }
+    .checkItem {
+      margin: 0;
+      transform: scale(0.5);
+      margin-left: 30px;
+      margin-top: -10px;
+    }
+    .prodname {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.product_detail_line_1 {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(242, 242, 242, 1) 2%,
+  //   rgba(170, 170, 170, 1) 97%
+  // );
+  background: #e8ffe8;
+  .vertical-text {
+    writing-mode: vertical-rl; /* 设置文本竖直排列 */
+    text-orientation: mixed; /* 允许混合文本方向 */
+    white-space: nowrap; /* 防止换行 */
+    font-weight: bolder;
+  }
+}
+.product_detail_line_2 {
+  display: flex;
+  justify-content: space-between;
+  .price {
+    font-weight: bolder;
+    color: @money-color;
+    // color: darkgoldenrod;
+  }
+  .time {
+    font-weight: bolder;
+    // color: darkkhaki;
+  }
+}
+.product_detail_line_3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.productWarnTitle {
+  font-weight: bolder;
+  // color: #70b603;
+}
+.productWarnContent {
+  font-size: 0.8rem;
+}
+
+.product-tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  .adm-list-body-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

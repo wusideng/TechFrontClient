@@ -1,0 +1,64 @@
+.user_container {
+  .user_header {
+    display: flex;
+    align-items: center;
+    // margin: 15px;
+    padding: 10px;
+    // background-color: cornflowerblue;
+    .photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    .control {
+      margin-left: 15px;
+    }
+    .user_name {
+      color: black;
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .phone {
+      margin-bottom: 5px;
+    }
+    .user_class {
+      // border: 1px solid #4147d5;
+      // background-color: gold;
+      // color: #4147d5;
+      border: 1px solid var(--adm-color-primary);
+      color: var(--adm-color-primary);
+      border-radius: 8px;
+      padding: 3px 8px;
+
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+  .user_card {
+    display: flex;
+    flex-direction: column;
+    padding: 0 !important;
+    gap: 25px;
+    background: #fbfbfb !important;
+    :global(.adm-card-header) {
+      background: linear-gradient(45deg, var(--adm-color-primary), #9fd09f);
+      color: white;
+      border-bottom: none !important;
+      padding: 8px 12px;
+      border-radius: 12px 12px 0 0 !important;
+    }
+    :global(.adm-card-body) {
+      border-bottom: none !important;
+      padding: 12px !important;
+    }
+  }
+  // :global(.adm-card) {
+  //   // background: #fff0cd !important;
+  // }
+}
+.user_card {
+  background-color: #fff;
+}

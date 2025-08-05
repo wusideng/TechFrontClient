@@ -1,0 +1,37 @@
+@import "@/assets/css/mixin.less";
+
+.order_container_wrapper {
+  :global(.content-area) {
+    .flex-column();
+    padding: 0 !important;
+    gap: 0 !important;
+    height: 0;
+  }
+  :global(.adm-tabs) {
+    height: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    :global(.adm-tabs-header) {
+      border: none !important;
+      :global(.adm-tabs-tab-wrapper) {
+        padding: 0 !important;
+      }
+      :global(.adm-tabs-tab-list) {
+        justify-content: space-between !important;
+      }
+    }
+    :global(.adm-tabs-content) {
+      flex: 1;
+      overflow-y: auto;
+    }
+  }
+
+  .order_list_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 5px;
+    height: 100%;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "ts-node src/index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@ngrok/ngrok": "^1.4.1",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/http-proxy-middleware": "^0.19.3",
+    "@types/node": "^22.13.5",
+    "http-proxy-middleware": "^3.0.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3"
+  }
+}

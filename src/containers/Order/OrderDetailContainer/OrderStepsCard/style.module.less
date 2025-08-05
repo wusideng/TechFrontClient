@@ -1,0 +1,57 @@
+.order_card {
+  background: #fff;
+}
+.steps_card {
+  padding: 0px;
+  :global(.adm-card-body) {
+    padding: 15px;
+    :global(.adm-steps-vertical) {
+      padding: 0;
+    }
+  }
+}
+
+.order_detail_tech {
+  display: flex;
+  justify-content: space-between;
+  .tech_step {
+    font-size: 0.8rem;
+    :global(.adm-step-content) {
+      padding-bottom: 12px;
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      :global(.adm-step-title) {
+        line-height: normal;
+        width: 55px;
+        font-weight: bold;
+      }
+      :global(.adm-step-description) {
+        font-size: smaller;
+      }
+    }
+    :global(.adm-step:last-child .adm-step-content) {
+      padding-bottom: 0;
+    }
+  }
+
+  .tech {
+    // padding: 10px;
+    align-self: stretch;
+    // background: #9ec894;
+    // border: 1px solid #cdb9b9;
+    // background: repeating-linear-gradient(45deg, #49ddcc, transparent 100px);
+    // background: linear-gradient(90deg, #6caca5, #a3e7ce 100px);
+    .tech_name {
+      margin-top: 15px;
+      color: #000;
+      text-align: center;
+      font-weight: bolder;
+    }
+    .tech_desc {
+      width: 150px;
+      height: 70px;
+      overflow: hidden;
+    }
+  }
+}

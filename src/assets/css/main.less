@@ -1,0 +1,193 @@
+@import "block.less";
+@import "common.less";
+@import "login.less";
+@import "product.less";
+@import "user.less";
+@import "tech.less";
+@import "chat.less";
+@import "feedback.less";
+@import "agreement.less";
+@import "@/assets/css/mixin.less";
+@import "scroll.less";
+html,
+body {
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
+}
+
+body {
+  margin: 0;
+  #app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@middle-content-background-color: #f7f7f7;
+@theme-color: #24a874;
+@theme-color-gradient-to: #7dda6e;
+@theme-color-secondary: #0fbd79;
+@theme-layout-wrapper-color: #24a874;
+@theme-color-dark: #939191;
+@money-color: #e79603;
+:root {
+  --background-common: linear-gradient(
+    to right,
+    @theme-color 0%,
+    @theme-color 20%,
+    @theme-color-gradient-to 100%
+  ) !important;
+  --background-common-super: linear-gradient(
+    to bottom,
+    #fffff0 0%,
+    #f8fff0 8%,
+    #f0fff0 16%,
+    #f0fff8 24%,
+    #f0ffff 32%,
+    #f5f5f5 40%
+  );
+  --background-common-super1: linear-gradient(
+    to bottom,
+    #f8fff0 0%,
+    #f0fff0 8%,
+    #f0fff8 16%,
+    #f0ffff 24%,
+    #f5f5f5 32%
+  );
+  --card-style-background: #fff7d7;
+  --card-background-lightyellow: #fffef0;
+  --money-color: @money-color;
+
+  --adm-color-primary: @theme-color-secondary;
+  --adm-color-success: @theme-color-secondary;
+  --adm-color-secondary: @theme-color-secondary;
+  --adm-color-warning: #ff8f1f;
+  --adm-color-danger: #ff3141;
+  --adm-color-dark-border: #c6c6c6;
+  --adm-color-white: #ffffff;
+  --adm-color-text: #333333;
+  --adm-color-text-secondary: #666666;
+  --adm-color-weak: #999999;
+  --adm-color-light: #cccccc;
+  --adm-color-border: #eeeeee;
+  --adm-color-box: #f5f5f5;
+  --adm-color-background: transparent;
+  --adm-color-background-dark: #f5f5f5;
+  --adm-font-size-main: var(--adm-font-size-5);
+
+  --adm-font-family: -apple-system, blinkmacsystemfont, "Helvetica Neue",
+    helvetica, segoe ui, arial, roboto, "PingFang SC", "miui",
+    "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+}
+
+.middleContent {
+  overflow: hidden;
+  .flex-column();
+  background: var(--background-common-super);
+  .content-area {
+    -webkit-overflow-scrolling: touch;
+    overflow: auto;
+    flex: 1;
+    gap: 15px;
+    padding: 10px 20px 20px 20px;
+    .flex-column();
+  }
+}
+.adm-button-primary:not(.adm-modal *):not(.adm-button-fill-outline) {
+  border: none;
+  background: var(--background-common);
+}
+// .adm-tab-bar-item-active {
+//   color: @theme-color;
+// }
+// .flex-col-layout
+.flex-col {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  height: 0;
+  width: 100%;
+}
+.background-primary {
+  background: var(--background-common);
+}
+.background-primary-super {
+  background: var(--background-common-super);
+}
+.adm-card {
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.13);
+}
+.adm-modal {
+  .adm-center-popup-wrap {
+    background: white;
+    padding: 0 12px;
+    border-radius: 12px;
+  }
+}
+.money-color {
+  color: @money-color;
+}
+.adm-button-block {
+  font-weight: bold;
+}
+.adm-button {
+  border-radius: 25px;
+  // padding: 5px 20px !important;
+}
+.long-btn {
+  padding: 3px 18px !important;
+}
+.adm-text-area {
+  border-radius: 12px;
+}
+.adm-image-tip {
+  visibility: hidden;
+}
+.coupon-modal {
+  .adm-modal-body {
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+  .adm-modal-content {
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+  .adm-center-popup-wrap {
+    width: 530px;
+    padding: 0 !important;
+    aspect-ratio: 15/19 !important; /* 750:950 的比例 */
+  }
+  .adm-modal-footer {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    bottom: 12px;
+    opacity: 0;
+  }
+}
+.invite-modal {
+  background-color: transparent !important;
+  .adm-modal-body {
+    padding: 0 !important;
+  }
+  .adm-modal-content {
+    padding: 0 !important;
+  }
+  .adm-center-popup-wrap {
+    background-color: transparent !important;
+    width: 530px;
+    aspect-ratio: 927/832 !important;
+    padding: 0 !important;
+  }
+  .adm-modal-footer {
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    bottom: 12px;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,234 @@
+@import "@/assets/css/mixin.less";
+
+.feedback-container {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  height: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  .adm-space-block {
+    align-items: center;
+  }
+  .nav-right {
+    font-size: 14px;
+    color: #10b981;
+  }
+
+  .content {
+    flex: 1;
+    padding: 12px;
+    padding-bottom: 70px;
+  }
+
+  .card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  }
+
+  .card-title {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: #333;
+  }
+
+  .text-area-container {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 8px;
+    overflow: hidden;
+  }
+
+  .feedback-textarea {
+    --font-size: 14px;
+    --color: #333;
+    --placeholder-color: #999;
+  }
+
+  .phone-input {
+    --font-size: 14px;
+    --color: #333;
+    --placeholder-color: #999;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 8px 12px;
+    height: 40px;
+    width: auto;
+  }
+
+  .upload-limit {
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+  }
+
+  .uploader-container {
+    margin-top: 8px;
+  }
+
+  .uploader-button {
+    width: 100px;
+    height: 100px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+  }
+
+  .uploader-text {
+    margin-top: 8px;
+    font-size: 12px;
+  }
+
+  .submit-area {
+    margin-top: 24px;
+  }
+
+  .submit-button {
+    --background-color: linear-gradient(90deg, #10b981, #34d399);
+    --border-radius: 24px;
+    height: 48px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .submit-hint {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    margin-top: 12px;
+  }
+
+  .tab-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-top: 1px solid #f0f0f0;
+    z-index: 999;
+  }
+}
+
+.feedback-history-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 0;
+  flex: 1;
+  .middleContent {
+    .flex-column();
+    .content-area {
+      .flex-column();
+      padding: 0 0 15px 0 !important;
+    }
+  }
+  .adm-tabs-header {
+    border-bottom: none;
+  }
+  .feedback-tabs {
+    // background-color: #fff;
+    // --adm-color-primary: #10b981;
+    margin-bottom: 10px;
+  }
+
+  .feedback-list-container {
+    flex: 1;
+    overflow: auto;
+    padding: 10px 20px;
+    .feedback-list-card-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  .feedback-list {
+    --adm-color-background: transparent;
+  }
+
+  .feedback-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .feedback-time {
+    font-size: 12px;
+    color: #999;
+  }
+
+  .status-tag {
+    font-size: 12px;
+    padding: 0 6px;
+    border-radius: 4px;
+  }
+
+  .feedback-content {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 12px;
+  }
+
+  .reply-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .reply-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  .reply-title {
+    font-size: 12px;
+    color: #10b981;
+    font-weight: 500;
+  }
+
+  .reply-time {
+    font-size: 12px;
+    color: #999;
+  }
+
+  .reply-content {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    flex-direction: column;
+    color: #999;
+    font-size: 14px;
+  }
+
+  .loading-container .adm-dot-loading {
+    margin-bottom: 8px;
+  }
+
+  /* 当没有数据时的空状态 */
+  .adm-empty {
+    margin-top: 60px;
+    // --adm-color-weak: #999;
+  }
+}

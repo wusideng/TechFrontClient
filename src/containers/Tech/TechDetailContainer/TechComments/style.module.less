@@ -1,0 +1,41 @@
+.comment_card {
+  background-color: #fff;
+  border-radius: 18px;
+  .comment_card_content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 5px;
+    .comment_line_1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .name {
+        font-size: 14px;
+        font-weight: bold;
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+      .comment_time {
+        color: var(--adm-color-weak);
+      }
+    }
+    .comment_header {
+      font: size 14px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .comment_line_2 {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+    .client_comment {
+      padding-top: 12px;
+    }
+  }
+}

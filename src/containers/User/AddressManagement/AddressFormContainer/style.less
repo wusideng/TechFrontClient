@@ -1,0 +1,50 @@
+.address-form {
+  background: #fff !important;
+  .form-container {
+    display: flex;
+    padding: 12px;
+    flex-direction: column;
+    .form-item {
+      display: flex;
+      padding: 12px 0;
+      justify-content: space-between;
+      gap: 15px;
+      border-bottom: 1px solid #ebebeb;
+      .location-select-wrapper {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        input {
+          pointer-events: auto !important;
+        }
+      }
+    }
+    .form-label {
+      min-width: 100px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .adm-input-element {
+      font-size: 14px;
+    }
+    // justify-content: space-between;
+  }
+  .default-address-item {
+    font-size: 16px;
+    padding-top: 27px !important;
+    color: var(--adm-color-primary);
+    .adm-checkbox-icon {
+      border-color: var(--adm-color-primary);
+    }
+
+    border: none !important;
+  }
+  .form-footer {
+    padding-top: 15px;
+    .save-address-btn {
+      border-radius: 16px !important;
+    }
+  }
+}

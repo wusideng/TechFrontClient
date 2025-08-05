@@ -1,0 +1,25 @@
+.wrapper {
+  background: transparent !important;
+  :global(.content-area) {
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+  .home_wrapper {
+    background: var(--background-common-super1);
+    background-position: center -20%; /* 向上移动20px */
+    flex: 1;
+    gap: 15px;
+    padding: 10px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    margin-top: -12px;
+    z-index: 2;
+  }
+  .product_item_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

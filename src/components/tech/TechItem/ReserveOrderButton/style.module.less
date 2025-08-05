@@ -1,0 +1,42 @@
+.tech_item_order {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.popup {
+  :global(.adm-popup-body) {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.invite_hint_modal {
+  :global(.adm-space) {
+    flex-direction: row-reverse !important;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0 !important;
+    :global(.adm-space-item) {
+      margin-bottom: 0 !important;
+    }
+  }
+  :global(button) {
+    width: 100px !important;
+  }
+  .invite_hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+.invite_button {
+  background: transparent !important;
+
+  border: 1px solid #e79807 !important;
+
+  color: #e79807;
+}

@@ -1,0 +1,58 @@
+.order {
+  background: var(--adm-color-background-dark) !important;
+  .order_content_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .product {
+      background: #fff;
+      .product_line_1 {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        .product_line_1_right {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          justify-content: space-around;
+        }
+      }
+      .product_line {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        .product_line_inner {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .coupon {
+            display: flex;
+            gap: 5px;
+            line-height: 1;
+            vertical-align: middle;
+          }
+        }
+        // justify-content: space-between;
+      }
+    }
+  }
+  .couponselect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 20px;
+    margin: 5px;
+    background: linear-gradient(135deg, #ff5733 50%, #33c1ff 50%);
+    color: white;
+    font-size: 14px;
+  }
+  .travle_method {
+    border: 0.5px solid var(--adm-color-primary);
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: var(--adm-color-primary);
+    font-weight: bold;
+    background-color: #28ff971a;
+  }
+}

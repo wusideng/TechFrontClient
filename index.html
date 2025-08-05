@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, viewport-fit=cover"
+    />
+    <title>尚达元</title>
+    <!-- <link
+      rel="shortcut icon"
+      href="https://avatars2.githubusercontent.com/u/46467235?s=60&v=4"
+      type="image/x-icon"
+    /> -->
+
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.6.0.js"></script>
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+    <script>
+      (function () {
+        if (
+          typeof WeixinJSBridge == "object" &&
+          typeof WeixinJSBridge.invoke == "function"
+        ) {
+          handleFontSize();
+        } else {
+          if (document.addEventListener) {
+            document.addEventListener(
+              "WeixinJSBridgeReady",
+              handleFontSize,
+              false
+            );
+          } else if (document.attachEvent) {
+            document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+            document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+          }
+        }
+        function handleFontSize() {
+          // 设置网页字体为默认大小
+          WeixinJSBridge.invoke("setFontSizeCallback", { fontSize: 0 });
+          // 重写设置网页字体大小的事件
+          WeixinJSBridge.on("menu:setfont", function () {
+            WeixinJSBridge.invoke("setFontSizeCallback", { fontSize: 0 });
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

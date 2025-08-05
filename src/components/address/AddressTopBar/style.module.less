@@ -1,0 +1,39 @@
+.address_top_bar {
+  display: flex;
+
+  justify-content: space-between;
+  .region_name_container {
+    display: flex;
+    // line-height: 1;
+    align-items: center;
+    .region_name {
+      // font-size: 16px;
+      // font-weight: bold;
+      margin-right: 5px;
+    }
+  }
+  .search_bar_wrapper {
+    margin-left: 12px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+
+    .address_top_bar_search {
+      flex: 1;
+      --border-radius: 18px;
+      --height: 30px !important;
+      :global(.adm-search-bar-input-box) {
+        background: white !important;
+        border: 0.5px solid var(--adm-color-dark-border);
+      }
+      :global(.adm-search-bar-input) {
+        --font-size: 14px !important;
+      }
+      :global(.adm-search-bar-cancel-button) {
+        --font-size: 14px !important;
+        color: var(--adm-color-primary);
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.address_select_container {
+  background: #fff !important;
+  :global(.adm-list-header) {
+    font-weight: bold;
+  }
+  :global(.adm-list) {
+    border: 0.5px solid var(--adm-color-dark-border);
+    border-radius: 15px;
+  }
+
+  :global(.adm-list-body) {
+    border: none !important;
+
+    :global(.adm-list-item-content-main) {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      :global(.adm-list-item-title) {
+        .list_title {
+          display: flex;
+          gap: 5px;
+          align-items: center;
+          // font-size: 14px;
+          color: black;
+          font-weight: bold;
+        }
+      }
+      :global(.adm-list-item-description) {
+        margin-left: 25px;
+      }
+    }
+  }
+}
+.current_location_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .refresh_current_location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--adm-color-primary);
+  }
+}

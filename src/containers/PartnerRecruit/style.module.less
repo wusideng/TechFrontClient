@@ -1,0 +1,76 @@
+.partner_recruit {
+  padding: 0 !important;
+  :global(.content-area) {
+    padding: 0 !important;
+  }
+  .wrapper {
+    flex: 1;
+    display: flex;
+    height: 0;
+    flex-direction: column;
+  }
+  .form_card_wrapper {
+    background: #f5f5f5 !important;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    overflow: auto;
+  }
+  :global(.adm-form-item-feedback-error) {
+    display: none;
+  }
+  .form_card {
+    margin: 0 12px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    :global(.adm-card-body) {
+      padding-top: 0 !important;
+    }
+    .custom_form_item {
+      :global(.adm-list-item-content-main) {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch;
+        .text_area_wrapper {
+          padding: 12px;
+          background-color: #f5f5f5;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
+  .second_card {
+    margin: 0 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .notice {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    text-align: center;
+    margin: 20px 0 12px 0;
+    padding: 0 15px;
+  }
+
+  .privacy {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .privacyLink {
+    color: #00c896;
+    text-decoration: none;
+    font-size: 14px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .submit_button_wrapper {
+    background-color: #fff;
+    padding: 12px 25px;
+  }
+}

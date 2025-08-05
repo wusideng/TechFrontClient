@@ -1,0 +1,137 @@
+.tech-list-item {
+  // color:#888888;
+  .title {
+    margin-left: 20px;
+    margin-bottom: 0px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-bottom: #dbdbdb 1px solid;
+  }
+  .content {
+    display: flex;
+    // margin-left: 20px;
+    // padding-top: 3px;
+    font-size: 0.7rem;
+    .content-right {
+      padding-left: 15px;
+      .content-price {
+        font-size: 1rem;
+        font-weight: bolder;
+        color: @money-color;
+      }
+      .content-oldprice {
+        text-decoration: line-through;
+        width: 50px;
+        padding-left: 15px;
+        color: #dbdbdb;
+      }
+      .content-btn {
+        position: relative;
+        right: 10px;
+        bottom: 10px;
+      }
+      .msgblock {
+        margin-right: 10px;
+        padding: 2px 5px;
+        color: white;
+        background: @theme-color;
+      }
+    }
+  }
+}
+
+.tech-item-order {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.techdetail-certify {
+  background-color: #e3fff6;
+  height: 50px;
+  line-height: 50px;
+  margin: 10px;
+  border-radius: 30px;
+  text-align: center;
+}
+.comments-line {
+  margin: 10px;
+  padding-right: 10px;
+  line-height: 2rem;
+  background: antiquewhite;
+  color: darkgoldenrod;
+  border-radius: 15px;
+  text-align: right;
+}
+.tech-detail-line1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .tech-name {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+  .tech-dist {
+    margin-right: 10px;
+    // vertical-align: middle;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-end;
+  }
+}
+.address-tag {
+  border: none;
+  align-self: stretch;
+  padding: 10px;
+  font-size: 14px;
+  // font-weight: 16px;
+  // border-radius: 16px;
+  // background: @theme-color;
+  // margin: 10px;
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tech-detail-content-wrapper {
+  // background: @middle-content-background-color;
+  display: flex;
+  flex-direction: column;
+  .tech-detail-title {
+    margin-top: 18px;
+    padding: 15px 10px;
+    // border-bottom: 1px solid #dbdbdb;
+    // background:white;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .adm-tabs-tab-line {
+    display: none;
+  }
+  .adm-tabs-header {
+    margin-top: 10px;
+    border-bottom: none;
+    .adm-tabs-tab {
+      font-size: 16px;
+      color: gray;
+    }
+    .adm-tabs-tab-active {
+      font-size: 18px;
+      color: black;
+      font-weight: bold;
+    }
+  }
+  .adm-tabs-content {
+    padding: 5px 0 !important;
+    // .adm-card-body {
+    //   padding: 5px 0;
+    // }
+  }
+}
+.tech-list-card {
+  border: 1px solid #c7c7c7 !important;
+}
