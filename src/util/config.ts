@@ -8,9 +8,9 @@ export const baseUrl = process.env.baseUrl;
 export const staticUrl = process.env.staticUrl;
 
 // 用于下单后配置发送通知短信
-export const notificationPhone = [18010260892, 13683575261, 18996531158];
+export const notificationPhone = [18010260892, 18996531158];
 // 用于下单后配置发送语音通知
-export const notificationVoicePhone = [18010260892, 13683575261, 18996531158];
+export const notificationVoicePhone = [18010260892, 18996531158];
 
 export const testOrderOpenIds = [
   "oK9p06eiEk0jWNvowVjb5lGlkocM",
@@ -41,8 +41,8 @@ export const cityAdmin = {
   "oK9p06VSWWzEnSwNNLwnv_3oP-oE": ["杭州", "巫山"],
 };
 export const cityAdminPhone = {
-  杭州市: [18010260892, 13683575261, 18996531158],
-  重庆市: [18010260892, 13683575261, 18996531158],
+  杭州市: [18010260892, 18996531158],
+  重庆市: [18010260892, 18996531158],
   北京市: [18614032685],
   青岛市: [13683575261],
 };
