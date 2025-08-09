@@ -31,7 +31,7 @@ const loginExemptRoutes = [
   `/${baseUrl}/prodTech`,
 ];
 const new_user_coupon_image_url =
-  "https://cdn.visualstreet.cn/images/coupon/55_1.png";
+  "https://sdy.visualstreet.cn/images/coupon/55_1.png";
 const useInitUser = () => {
   const navigate = useNavigate();
   const location = useLocation();
