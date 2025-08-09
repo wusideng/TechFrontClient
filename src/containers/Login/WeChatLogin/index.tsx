@@ -32,11 +32,14 @@ const WeChatLogin = ({ loading = false }: { loading?: boolean }) => {
     // ); // 替换为你的重定向 URI
 
     const redirectUri = encodeURIComponent(
-      `https://cs.visualstreet.cn/${baseUrl}/?invite_code=${invite_code}`
+      `https://visualstreet.cn/${baseUrl}/?invite_code=${invite_code}`
     ); // 替换为你的重定向 URI
     const state = Math.random().toString(36).substring(7); // 随机生成状态字符串
     const authUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&redirect_uri=${redirectUri}&response_type=code&scope=snsapi_userinfo&state=${state}#wechat_redirect`;
     //防止后退按钮跳转回这个页面造成直接访问/baseurl/login 页面给出404
+    console.log("haidong_dev authUrl:", authUrl)
+    console.log("haidong_dev appId:", appId)
+    console.log("haidong_dev redirectUri:", redirectUri)
     window.history.replaceState(
       {}, // 状态对象，可以存储与 URL 相关的数据
       "", // 页面标题（大多数浏览器忽略这个参数）
@@ -47,7 +50,7 @@ const WeChatLogin = ({ loading = false }: { loading?: boolean }) => {
   const codeHandler = () => {
     const appId = "wxfa6035d95514257e"; // 替换为你的 AppID
     const redirectUri = encodeURIComponent(
-      `https://cs.visualstreet.cn/${baseUrl}/code`
+      `https://visualstreet.cn/${baseUrl}/code`
     ); // 替换为你的重定向 URI
     const state = Math.random().toString(36).substring(7); // 随机生成状态字符串
     const authUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&redirect_uri=${redirectUri}&response_type=code&scope=snsapi_userinfo&state=${state}#wechat_redirect`;
