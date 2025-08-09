@@ -32,7 +32,7 @@ const WeChatLogin = ({ loading = false }: { loading?: boolean }) => {
     // ); // 替换为你的重定向 URI
 
     const redirectUri = encodeURIComponent(
-      `https://visualstreet.cn/${baseUrl}/?invite_code=${invite_code}`
+      `https://cs.visualstreet.cn/${baseUrl}/?invite_code=${invite_code}`
     ); // 替换为你的重定向 URI
     const state = Math.random().toString(36).substring(7); // 随机生成状态字符串
     const authUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&redirect_uri=${redirectUri}&response_type=code&scope=snsapi_userinfo&state=${state}#wechat_redirect`;
@@ -47,7 +47,7 @@ const WeChatLogin = ({ loading = false }: { loading?: boolean }) => {
   const codeHandler = () => {
     const appId = "wxfa6035d95514257e"; // 替换为你的 AppID
     const redirectUri = encodeURIComponent(
-      `https://visualstreet.cn/${baseUrl}/code`
+      `https://cs.visualstreet.cn/${baseUrl}/code`
     ); // 替换为你的重定向 URI
     const state = Math.random().toString(36).substring(7); // 随机生成状态字符串
     const authUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appId}&redirect_uri=${redirectUri}&response_type=code&scope=snsapi_userinfo&state=${state}#wechat_redirect`;
