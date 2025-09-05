@@ -6,7 +6,8 @@ import {
 } from "@reduxjs/toolkit";
 import { ClientUser } from "@/types/ClientUser";
 import { deleteCookie } from "@/util/utils";
-import mockUserPhone from "@/lib/mockUserPhonejc.json";
+// import mockUserPhone from "@/lib/mockUserPhonejc.json";
+import mockUserPhone from "@/lib/mockUserPhonehd.json";
 import {
   fetchUserInfoByOpenId,
   fetchUserInfoByWxCode,

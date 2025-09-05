@@ -37,8 +37,8 @@ export const cityOption = [
 export const cityAdmin = {
   oK9p06eiEk0jWNvowVjb5lGlkocM: cityOption,
   oK9p06UX2a02_b9Cn4W7cfoWjE3c: cityOption,
-  "oK9p06S43s67ui0VxR3-h3REu0VY": cityOption,
-  "oK9p06VSWWzEnSwNNLwnv_3oP-oE": ["杭州", "巫山"],
+  "oK9p06S43s67ui0VxR3-h3REu0VY": ["青岛市", "杭州市", "重庆市"], //姜程 
+  "oK9p06VSWWzEnSwNNLwnv_3oP-oE": cityOption, //蒋娜
 };
 export const cityAdminPhone = {
   杭州市: [18010260892, 18996531158],
