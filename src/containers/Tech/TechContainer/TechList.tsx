@@ -6,6 +6,7 @@ import { TechUser } from "@/types/Tech";
 import { useEffect, useMemo } from "react";
 import styles from "./style.module.less";
 import TechItem from "@/components/tech/TechItem";
+import TechItemFrame from "@/components/tech/TechItemFrame";
 import { Product } from "@/types/Product";
 
 const TechList = ({
@@ -58,7 +59,8 @@ const TechList = ({
     >
       <div className={styles.tech_item_list_wrapper}>
         {techusers.map((techuser: TechUser, index: number) => (
-          <TechItem key={index} techuser={techuser} />
+          // <TechItem key={index} techuser={techuser} />
+          <TechItemFrame key={index} techuser={techuser} />
         ))}
       </div>
     </InfiniteScrollLoader>

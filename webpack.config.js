@@ -97,7 +97,8 @@ module.exports = {
       },
       {
         context: ["/apidev"],
-        target: "https://visualstreet.cn/apidev",
+        // target: "https://cs.visualstreet.cn/apidev",
+        target: "https://visualstreet.cn/apidev", // 阿里云
         changeOrigin: true,
         secure: false,
         pathRewrite: {
@@ -106,7 +107,8 @@ module.exports = {
       },
       {
         context: ["/api"],
-        target: "https://visualstreet.cn/api",
+        // target: "https://cs.visualstreet.cn/api",
+        target: "https://visualstreet.cn/api", // 阿里云
         changeOrigin: true,
         secure: false,
         pathRewrite: {
@@ -151,11 +153,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: [
-              "@babel/preset-env",
-              "@babel/preset-react",
-              "@babel/preset-typescript",
-            ],
+            presets: ["@babel/preset-env", "@babel/preset-react", "@babel/preset-typescript"],
             plugins: ["@babel/plugin-transform-runtime"],
           },
         },
@@ -256,8 +254,7 @@ module.exports = {
       type: "umd",
       name: "app",
     },
-    publicPath:
-      node_env == "development" ? `/${baseUrl}/` : `${staticUrl}/${baseUrl}/`,
+    publicPath: node_env == "development" ? `/${baseUrl}/` : `${staticUrl}/${baseUrl}/`,
     // 添加webpack 5的资源模块输出配置
     assetModuleFilename: "assets/[hash][ext][query]",
   },
